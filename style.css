@@ -29,9 +29,12 @@
 
 /* Cards */
 .card {
-  transition: transform 0.3s, box-shadow 0.3s;
-  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.2); /* 0.2 = 20% white transparency */
+  border: none;                         /* border remove */
+  color: white;                         /* text white for readability */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* thoda shadow for clarity */
 }
+
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
@@ -69,4 +72,8 @@ footer {
 
 .btn:hover {
   box-shadow: 0 0 15px rgba(37,117,252,0.6);
+}
+
+.container.my-5 {
+  margin-top: 2rem !important; /* default se chhota */
 }
