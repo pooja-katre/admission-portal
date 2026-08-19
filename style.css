@@ -118,9 +118,9 @@ h2.text-primary {
 }
 
 .about-page {
-  background: #bba2c9;
+  background: #100c13;
   font-family: 'Segoe UI', sans-serif;
-  color: #333; /* dark text */
+  color: #302d2d; /* dark text */
 }
 
 .overlay {
@@ -149,4 +149,13 @@ h2.text-primary {
   background: rgba(255,255,255,0.85);
   border: none;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.card p {
+  font-style: italic;
+  color: #444;
+}
+.card h6 {
+  font-weight: bold;
+  margin-top: 10px;
 }
