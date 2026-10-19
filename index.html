@@ -5,101 +5,96 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admission Portal</title>
   <!-- Bootstrap CSS -->
-   <link href="style.css"rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+   <!-- Custom CSS -->
   <style>
-   body {
-  font-family: 'Segoe UI', sans-serif;
-  background-image: url('assets/college.jpg'); 
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-        }
-     .overlay {
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4));
-  min-height: 100vh;
-  padding: 20px;
-}
-
-
-    .navbar {
-      background-color: #fff;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .hero-section {
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('assets/college.jpg') center/cover no-repeat fixed;
       color: white;
-      text-align: center;
-      padding: 80px 20px;
     }
+
     .card {
-      transition: transform 0.3s;
+      background-color: rgba(0,0,0,0.7);
+      color: white;
     }
-    .card:hover {
-      transform: scale(1.05);
-    }
+
     footer {
-      background: #fff;
-      padding: 15px;
-      text-align: center;
-      margin-top: 30px;
-      box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+      background-color: rgba(0,0,0,0.8);
     }
+
+    .btn-apply {
+    background: linear-gradient(45deg, #ff6b6b, #f06595);
+    color: white;
+    font-weight: bold;
+    border-radius: 30px;
+    padding: 12px 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+  }
+
+  .btn-apply:hover {
+    background: linear-gradient(45deg, #f06595, #ff6b6b);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+  }
+
+  .btn-apply:active {
+    transform: scale(0.95);
+  }
   </style>
 </head>
-<body>
-    <div class="overlay"></div>
+<body class="bg-dark text-light">
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg bg-light shadow-sm">
-  <div class="container">
-    <a class="navbar-brand fw-bold text-primary" href="index.html">Admission Portal</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link fw-semibold" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-semibold" href="about.html">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-semibold" href="contact.html">Contact</a>
-        </li>
-        <li class="nav-item">
-          <button class="btn btn-primary ms-3">Login</button>
-        </li>
-      </ul>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Admission Portal</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link fw-semibold" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="contact.html">Contact</a></li>
+          <li class="nav-item"><button class="btn btn-light ms-3">Login</button></li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
+            
+ <!-- Hero Section with Overlay -->
+<section class="hero-section text-center text-white d-flex align-items-center" 
+         style="background: rgba(0,0,0,0.6); min-height: 100vh;">
 
-
-  <!-- Hero Section -->
-  <section class="hero-section">
+  <div class="container">
     <h1 class="fw-bold">Welcome to College Admission Portal</h1>
     <p class="lead">Apply online, track your application, and secure your admission easily.</p>
-    <a href="#apply" class="btn btn-light btn-lg mt-3">Apply Now</a>
-  </section>
+    <a href="#apply" class="btn btn-apply btn-lg mt-3">Apply Now</a>
+  </div>
+</section>
+
 
   <!-- Features Section -->
   <div class="container my-5">
     <div class="row text-center">
       <div class="col-md-4">
-        <div class="card p-3">
+        <div class="card p-3 shadow-sm">
           <h4>📝 Online Application</h4>
           <p>Fill admission forms online with document upload facility.</p>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="card p-3">
+        <div class="card p-3 shadow-sm">
           <h4>📊 Merit List</h4>
           <p>Check your admission status and merit list instantly.</p>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="card p-3">
+        <div class="card p-3 shadow-sm">
           <h4>💳 Fee Payment</h4>
           <p>Pay admission fees securely through online gateway.</p>
         </div>
@@ -109,8 +104,8 @@
 
   <!-- Application Form -->
   <div class="container my-5" id="apply">
-    <h2 class="text-center text-white mb-4">Admission Form</h2>
-    <div class="card p-4">
+    <h2 class="text-center text-primary mb-4">Admission Form</h2>
+    <div class="card p-4 shadow">
       <form>
         <div class="mb-3">
           <label class="form-label">Full Name</label>
@@ -138,35 +133,34 @@
     </div>
   </div>
 
- <!-- Testimonials Section -->
-<div class="container my-5">
-  <h2 class="text-center text-primary mb-4">What Our Students Say</h2>
-  <div class="row">
-    <div class="col-md-4">
-      <div class="card p-3 shadow-sm">
-        <p>"This college gave me the best opportunities to grow in the IT industry."</p>
-        <h6 class="text-end text-secondary">- Priya, MCA Student</h6>
+  <!-- Testimonials Section -->
+  <div class="container my-5">
+    <h2 class="text-center text-primary mb-4">What Our Students Say</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card p-3 shadow-sm">
+          <p>"This college gave me the best opportunities to grow in the IT industry."</p>
+          <h6 class="text-end text-secondary">- Priya, MCA Student</h6>
+        </div>
       </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card p-3 shadow-sm">
-        <p>"Excellent faculty and supportive environment for learning."</p>
-        <h6 class="text-end text-secondary">- Rahul, BCA Student</h6>
+      <div class="col-md-4">
+        <div class="card p-3 shadow-sm">
+          <p>"Excellent faculty and supportive environment for learning."</p>
+          <h6 class="text-end text-secondary">- Rahul, BCA Student</h6>
+        </div>
       </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card p-3 shadow-sm">
-        <p>"The placement assistance helped me land my first job."</p>
-        <h6 class="text-end text-secondary">- Sneha, BSc CS Student</h6>
+      <div class="col-md-4">
+        <div class="card p-3 shadow-sm">
+          <p>"The placement assistance helped me land my first job."</p>
+          <h6 class="text-end text-secondary">- Sneha, BSc CS Student</h6>
+        </div>
       </div>
     </div>
   </div>
-</div>
-    
 
   <!-- Footer -->
-  <footer>
-    <p>&copy; 2026 College Admission Portal | Designed by You</p>
+  <footer class="bg-primary text-white text-center p-3 mt-5">
+    &copy; 2026 College Admission Portal | Designed by me
   </footer>
 
   <!-- Bootstrap JS -->
